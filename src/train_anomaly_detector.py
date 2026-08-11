@@ -82,7 +82,7 @@ if __name__ == "__main__":
     df = load_data()
 
     print("Training Isolation Forest...")
-    model, scaler, df = train_isolation_forest(df, contamination=0.01)
+    model, scaler, df = train_isolation_forest(df, contamination=0.015)
 
     evaluate(df)
     plot_results(df)
