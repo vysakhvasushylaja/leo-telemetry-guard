@@ -28,7 +28,7 @@ st.info(
 
 @st.cache_data
 def load_telemetry():
-    return pd.read_csv("../data/telemetry_with_predictions_v2.csv")
+    return pd.read_csv("../data/telemetry_with_predictions_fusion.csv")
 
 @st.cache_data
 def load_zero_trust():
@@ -55,7 +55,7 @@ tamper_rate = (caught / tampered * 100) if tampered else 0
 with col1:
     st.metric("Telemetry Packets Analyzed", f"{len(telemetry_df):,}")
 with col2:
-    st.metric("ML Anomaly Detection Recall", f"{recall:.0f}%")
+    st.metric("Fusion Detector Recall", f"{recall:.0f}%")
 with col3:
     st.metric("Zero-Trust Tamper Detection", f"{tamper_rate:.0f}%")
 with col4:
