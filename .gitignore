@@ -2,4 +2,7 @@ venv/
 __pycache__/
 *.pyc
 data/*.csv
+!data/smap_msl_validation_results.csv
 data/*.png
+data/smap_msl/
+data/live_telemetry_stream.csv
